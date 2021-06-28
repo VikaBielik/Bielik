@@ -1,3 +1,5 @@
+Задача-1 Ремонт
+
 def InputData(dataInp)
   if dataInp.to_i < 1000
     
