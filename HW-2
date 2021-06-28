@@ -1,0 +1,32 @@
+def InputData(dataInp)
+  if dataInp.to_i < 1000
+    
+    return dataInp
+  else
+    puts("Введите значение меньше 1000: ")
+    dataInp = gets
+    return dataInp
+  end
+end
+
+puts("Введите длину: ")
+dataInp = gets
+
+lengthValue = InputData dataInp
+puts("длина: " + lengthValue)
+
+puts("Введите ширина: ")
+dataInp = gets
+widthValue = InputData dataInp
+puts("ширина: " + widthValue)
+
+puts("Введите высоту: ")
+dataInp = gets
+heightValue = InputData dataInp
+puts("высота: " + heightValue)
+
+scaleData = ((lengthValue.to_i * heightValue.to_i)*2) + ((widthValue.to_i * heightValue.to_i)*2)
+
+quantPaint = scaleData/16
+
+puts("Вам необходимо: " + quantPaint.to_s + " банок краски")
