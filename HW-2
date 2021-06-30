@@ -32,3 +32,38 @@ scaleData = ((lengthValue.to_i * heightValue.to_i)*2) + ((widthValue.to_i * heig
 quantPaint = scaleData/16
 
 puts("Вам необходимо: " + quantPaint.to_s + " банок краски")
+
+
+
+Задача 3 Количество дубликатов строка
+def counter (string)
+  string1 = string.downcase
+  p = string1.chars.uniq.count {| char| string1.count(char) > 1 }
+  puts p
+end
+counter(string)
+
+Задача 4 ДНК
+
+def change (word)
+  replacements = {
+    "a" => "t",
+    "t" => "a",
+    "g" => "c",
+    "c" => "g",
+  }
+word.gsub(/[attgc]/, replacements)
+end
+
+Задача 5  Shortest word
+
+sent = "Lets all go on holiday somewere very cold"
+sent_new = sent.split
+min_size = sent_new[0].size
+
+for elem in sent_new
+  if min.size > elem.size
+    min_size = elem.size
+  end
+end
+
