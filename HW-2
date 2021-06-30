@@ -43,7 +43,7 @@ def counter (string)
 end
 counter(string)
 
-Задача 4 ДНК
+Задача 4 ДНA
 
 def change (word)
   replacements = {
