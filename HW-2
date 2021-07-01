@@ -69,3 +69,14 @@ end
 
 задача 6 Сортировка 
 
+def order(str)
+  if str.empty?
+    return '   '
+  end
+
+  arr_answ = [ ]
+  array_words = str.split 
+  array_words.each |w|
+      n = w[/[1-9]/]
+      arr_answ[n] = w
+end
