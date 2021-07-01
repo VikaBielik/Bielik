@@ -1,0 +1,26 @@
+Задача 2  Two oldest ages
+
+
+def age(nums)
+  return nums.sort[-2, 2]
+end
+
+max_value = [1, 2, 10, 8]
+
+p age max_value
+
+
+
+
+
+Задача 1 Минимальная сумма 
+def min_list(mass)
+  res = 0 
+  for i in 0...mass.lenght 
+    res += mass [i].min
+  end
+  return res 
+end
+
+
+puts ( 'Результат: ' + min_list([[13, 2, 34, 25], [4, 5, 6], [7, 8, 9, 12, 1]]).to_s)
