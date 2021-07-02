@@ -30,3 +30,10 @@ else
 else 
   board[position 'n'] = 'empty'
 end
+
+def has_winner(board)
+ has_winner.each do |line|
+ return true if (line - board) == []
+  end
+  return false
+  end
