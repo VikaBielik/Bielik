@@ -1,0 +1,122 @@
+Используя данные из массива хешей [ссылка] напишите функции, возвращающие следующие данные:
+
+1.Средний пробег
+
+def middle(cars)
+	middle = 0
+	
+	cars.each do |car|
+		middle += car[:mileage]
+	end
+	
+	return middle / cars.length
+end
+p middle cars
+
+
+
+
+2.Средний год выпуска
+
+def middle_year(cars)
+	middle = 0 
+	
+	cars.each do |car|
+		middle += car[:year]
+	end
+	
+	return middle / cars.length
+end
+p middle_year cars
+
+3. Средний возраст
+
+def middle_age(cars)
+	middle = 0 
+	
+	cars.each do |car|
+		middle += 2021 - car[:year]
+	end
+	
+	return middle / cars.length
+end
+p middle_age cars
+
+4. Средний пробег за год
+
+def mle_year (cars)
+    x = (Time.now).year
+	mle_yaer = 0
+    cars.each { |car| car[:mil] = car[:mileage] / (x - car[:year]) }
+	
+	cars.each do |mil|
+		mle_year += mil[:mil]
+	end
+    return mle_year / cars.length
+end
+p mle_year cars
+
+5. Медиана пробега 
+
+def mid_miles(cars)
+	a = []
+	
+	cars.each do |car|
+		a.push(car[:mileage])
+	end
+	
+	mid_miles = a.length / 2
+	
+	return a.sort[mid_miles - 1]
+end
+p mid_miles cars
+
+6.Медиана года выпуска
+
+def mid_years(cars)
+	a = []
+	
+	cars.each do |car|
+		a.push(car[:year])
+	end
+	
+	avg = a.length / 2
+	
+	return a.sort[mid_yaers - 1]
+end
+p mid_year cars
+
+7. Медиана возраста
+
+def mid_age(cars)
+	a = []
+	
+	cars.each do |car|
+		a.push(2021 - car[:year])
+	end
+	
+	mid_age = a.length / 2
+	
+	return a.sort[mid_age - 1]
+end
+p mid_age cars
+
+8.Медиана пробега за год
+
+def mid_miles_year(cars)
+    x = (Time.now).year
+	  a = []
+    cars.each { |car| car[:mil] = car[:mileage] / (x - car[:year]) }
+	
+	cars.each do |mil|
+		a.push(mil[:mil])
+	end
+	
+	avg = a.length / 2
+    return a.sort[avg - 1]
+end
+
+
+
+
+
