@@ -29,4 +29,30 @@ def addreviatera(comeword)
   end
 
   puts addreviatera('cascading style sheets')
+  
+  3. Написать функцию, которая получает url и выводит подробную информацию о нем.
+Например:
+url “https://career.softserveinc.com/en-us/learning-and-certification/formats-2/”,
+информация
+“протокол: https, домен: career.softserveinc.com, путь: en-us/learning-and-certification/formats-2/”.
+
+def site_data site
+  uri = URI (site)
+  return uri.scheme, uri.host, uri.path
+end
+
+p site_data "https://career.softserveinc.com/en-us/learning-and-certification/formats-2/"
+
+4. def shortest_country_name arr
+  def shortest_country_name(events)
+    a = []
+    events.each do |names|
+      a.push(names["loc_country"])
+    end
+    a = a.sort_by {|x| x.length}
+    return a[0]
+  end
+p shortest_country_name events
+
+5. def countries arr
 
