@@ -1,0 +1,32 @@
+1. Написать функцию, которая преобразует названия cssстилей с дефисом в название 
+в СamelСase стиле: 
+font-size в fontSize, background-color в backgroundColor, text-align в textAlign.
+
+def camelcase(word)
+	sent_word = word.split('')
+	
+	for i in 0..sent_word.length 
+		if sent_word[i] == '-'
+			sent_word.delete_at(i)
+		end
+	end
+  
+	return sent_word.join
+end
+
+puts camelcase('font-size')
+
+2. Написать функцию, которая принимает словосочетание и превращает его в аббревиатуру.
+Например: cascading style sheets в CSS, объектно-ориентированное программирование в ООП.
+
+def addreviatera(comeword)
+  word = comeword.split
+  a = []
+  word.each do |bykva|
+    a << bykva[0]
+  end
+  return a.join.upcase
+  end
+
+  puts addreviatera('cascading style sheets')
+
