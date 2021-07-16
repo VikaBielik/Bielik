@@ -1,5 +1,5 @@
-trk = [{ 'vertices' => 'ABC',
-    'a' => 10,
+tr = [{ 'vertices' => 'ABC',
+'a' => 10,
 'b' => 20,
 'c' => 22.36 },
 { 'vertices' => 'DET',
