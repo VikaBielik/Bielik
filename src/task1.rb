@@ -1,5 +1,5 @@
 def chessboard(l, w , s)
-arr = []
+arr = ' '
 
 line1 = (s + ' ') * (w / 2)
 line1 << s if w.odd?
