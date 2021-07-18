@@ -1,6 +1,10 @@
-def palindr(n) 
+# входные параментры - целое число
+# извлеченный из числа палиндром либо 0, если извлечение не удалось
+
+def p(n) 
     n == n.to_s.reverse.to_i 
 end
+
 num = 1234437
 arr_num = num.digits
 arr_num.size 
@@ -14,3 +18,4 @@ arr_num.each do |n|
     print (n)
     end
 end
+# 7344321
