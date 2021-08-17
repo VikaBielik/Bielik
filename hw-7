@@ -1,0 +1,11 @@
+def random_login
+    login = ''
+    chars1 ='ABCDEFGHJKMLPQRSTUWXYZ'
+    login << chars1[rand(chars1.size)]
+    lenght = rand(1..20)
+    chars2 = 'abcdefghjkrpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789'
+    lenght.times { login << chars2[rand(chars2.size)] }
+    return login
+  end
+  
+  p random_login
