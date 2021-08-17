@@ -9,3 +9,10 @@ def random_login
   end
   
   p random_login
+
+
+def shuffle
+  words = ['hello','my','name','is','Lusi']
+  words.sort_by!{rand}
+end
+p shuffle
