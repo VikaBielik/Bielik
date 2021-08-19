@@ -1,0 +1,28 @@
+def numberToText(number)
+    one = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'] #1,2,3,4,5,6,7,8,9
+    second = ['X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX'] #10,11,12,13,14,15,16,17,18,19,20
+    ten = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'] #10,20,30,40,50,60,70,80,90
+    hundred = ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM', 'M'] #100,200,300,400,500,600,700,800,900,1000
+    
+    if number > 0 && number <= 9
+        return one[number - 1]
+      
+      elsif number >= 10 && number <= 20
+        return second[number - 10]
+  
+      elsif number > 20 && number <= 99
+        str = number.to_s
+        new = Array.new
+        new << ten[str[0].to_i - 10] << one[str[1].to_i - 1 ]
+        return new.join("")
+      
+    elsif number > 100 && number <= 1000
+        str = number.to_s
+        new = Array.new
+        new << hundred[str[0].to_i - 1] << ten[str[1].to_i - 1] << one[str[2].to_i - 1]
+        #<< ten[str[2].to_i - 1]
+       
+        return new.join("")
+      end
+    end
+  puts(numberToText(216))
